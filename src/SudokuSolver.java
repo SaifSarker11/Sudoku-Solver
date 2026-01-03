@@ -29,8 +29,8 @@ public class SudokuSolver{
         if (row == board. length){
             return true;
         }
-        int nrow = 0;
-        int ncol = 0;
+        int nrow;
+        int ncol;
         if (col == board.length - 1){
             nrow = row + 1;
             ncol = 0;
@@ -73,12 +73,11 @@ public class SudokuSolver{
         };
        sol.solveSudoku(board);
 
-        //Print solved board
-        for(int i = 0; i < board. length; i++){
-            for(int j = 0; j < board[i].length; j++){
-             System.out.print(board[i][j] + " ");
+        for (char[] board1 : board) {
+            for (int j = 0; j < board1.length; j++) {
+                System.out.print(board1[j] + " ");
             }
             System.out.println();
-      }
+        }
    }
 }
